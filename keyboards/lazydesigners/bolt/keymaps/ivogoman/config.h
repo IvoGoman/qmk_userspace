@@ -1,0 +1,6 @@
+#pragma once
+
+#define RETRO_SHIFT
+#define NO_AUTO_SHIFT_ALPHA
+#define TAPPING_TERM 250
+#define AUTO_SHIFT_TIMEOUT TAPPING_TERM
