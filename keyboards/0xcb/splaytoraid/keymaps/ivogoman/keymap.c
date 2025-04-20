@@ -3,9 +3,9 @@
 
 #include QMK_KEYBOARD_H
 
-#define LTNAV_ESC LT(_NAV, KC_ESC)
-#define LTNUM_SPC LT(_NUM, KC_SPC)
-#define LTSYM_DEL LT(_SYM, KC_DEL)
+#define LTNAV_ESC  LT(_NAV, KC_ESC)
+#define LTNUM_SPC  LT(_NUM, KC_SPC)
+#define LTSYM_BSPC LT(_SYM, KC_BSPC)
 
 enum layer_names {
     _BASE,
@@ -18,22 +18,22 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
   [_BASE] = LAYOUT_40(
               KC_Q,         KC_W,         KC_E,         KC_R,         KC_T,               KC_Y,     KC_U,             KC_I,             KC_O,             KC_P,
     KC_TAB,  LCTL_T(KC_A), LALT_T(KC_S), LSFT_T(KC_D), LGUI_T(KC_F),  KC_G,               KC_H,     RGUI_T(KC_J),     RSFT_T(KC_K),     LALT_T(KC_L),     RCTL_T(KC_SCLN),  KC_BSPC,
-    KC_LCTL,   KC_Z,         KC_X,         KC_C,         KC_V,         KC_B,               KC_N,     KC_M,             KC_COMM,          KC_DOT,           KC_SLSH,          KC_QUOTE,
-                                  KC_LSFT,  LTNAV_ESC,   KC_ENT,                             LTNUM_SPC,   LTSYM_DEL,    KC_RSFT
+    KC_LCTL,   KC_Z,         KC_X,         KC_C,         KC_V,         KC_B,              KC_N,     KC_M,             KC_COMM,          KC_DOT,           KC_SLSH,          KC_QUOTE,
+                                  KC_UNDS,  LTNAV_ESC,   KC_ENT,                          LTNUM_SPC,   LTSYM_BSPC,    KC_DEL
   ),
 
   [_NUM] = LAYOUT_40(
               _______,  KC_7,     KC_8,     KC_9,     _______,            _______,  _______,  _______,  _______,  _______,
     _______,  _______,  KC_4,     KC_5,     KC_6,     _______,            _______,  _______,  _______,  _______,  _______,  _______,
     _______,  _______,  KC_1,     KC_2,     KC_3,     _______,            _______,  _______,  _______,  _______,  _______,  _______,
-                                  KC_0,  _______,  _______,            _______,  _______,  _______
+                                   _______, KC_0,     _______,            _______,  _______,  _______
   ),
 
   [_SYM] = LAYOUT_40(
-              KC_EXLM,  KC_AT,    KC_HASH,  KC_DLR,   KC_PERC,            KC_CIRC,  KC_AMPR,  KC_ASTR,  KC_LPRN,  KC_RPRN,
-    _______,  KC_LBRC,  KC_LCBR,  KC_RCBR,  KC_RBRC,  _______,            KC_MINS,  KC_BSLS,  _______,  _______,  KC_GRV,   KC_GRV,
-    _______,  _______,  KC_LPRN,  KC_RPRN,  _______,  KC_UNDS,            KC_UNDS,  KC_PIPE,  _______,  _______,  KC_TILD, KC_TILD,
-                                  KC_MINS,  KC_PLUS,  KC_EQUAL,            _______,  _______,  _______
+              KC_GRV ,  KC_LABK,  KC_RABK,  KC_MINS,  KC_PIPE,            KC_CIRC,  KC_LCBR,  KC_RCBR,  KC_DLR , _______,
+    KC_BSLS,  KC_EXLM,  KC_ASTR,  KC_SLSH,  KC_EQL,  KC_AMPR,            KC_HASH,  KC_LPRN,  KC_RPRN,  KC_SCLN, KC_DQUO,  _______,
+    _______,  KC_TILD,  KC_PLUS,  KC_LBRC,  KC_RBRC,  KC_PERC,            KC_AT  ,  KC_COLN,  KC_COMM,  KC_DOT , KC_QUOT,  _______,
+                                  _______,  _______,  _______,            _______,  _______,  _______
   ),
 
   [_NAV] = LAYOUT_40(
@@ -50,7 +50,7 @@ const char chordal_hold_layout[MATRIX_ROWS][MATRIX_COLS] PROGMEM =
              'L', 'L', 'L', 'L', 'L',  'R', 'R', 'R', 'R', 'R',
         'L', 'L', 'L', 'L', 'L', 'L',  'R', 'R', 'R', 'R', 'R', 'R',
         'L', 'L', 'L', 'L', 'L', 'L',  'R', 'R', 'R', 'R', 'R', 'R',
-                       'L', 'L', 'L',  'R', 'R', 'R'
+                       'L', 'L', 'L',  'R', '*', 'R'
     );
 
 const uint16_t PROGMEM encoder_map[][NUM_ENCODERS][NUM_DIRECTIONS] = {
