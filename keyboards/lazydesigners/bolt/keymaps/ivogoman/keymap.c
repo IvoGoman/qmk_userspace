@@ -49,23 +49,23 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
     [_SYM] = LAYOUT(
                _______,   KC_GRV ,  KC_LABK,  KC_RABK,  KC_MINS,  KC_PIPE,            KC_CIRC,  KC_LCBR,  KC_RCBR,  KC_DLR ,  KC_NO,    KC_NO,
                _______,   KC_EXLM,  KC_ASTR,  KC_SLSH,  KC_EQL,   KC_AMPR,            KC_HASH,  KC_LPRN,  KC_RPRN,  KC_SCLN,  KC_DQUO,  KC_NO,
-               _______,   KC_TILD,  KC_PLUS,  KC_LBRC,  KC_RBRC,  KC_PERC,            KC_AT,    KC_COLON, KC_COMM,  KC_DOT ,  KC_QUOT,  KC_NO, KC_NO,
-               KC_NO,     KC_UNDS,                    _______, _______,               KC_NO, KC_NO,                     KC_NO,   KC_NO,  KC_NO
+               _______,   KC_TILD,  KC_PLUS,  KC_LBRC,  KC_RBRC,  KC_PERC,   KC_NO,   KC_AT,    KC_COLON, KC_COMM,  KC_DOT,   KC_QUOT,  KC_NO,
+               KC_NO,     KC_UNDS,                    _______, _______,               KC_NO, KC_NO,                 KC_NO,    KC_NO,    KC_NO
              ),
     [_NAV] = LAYOUT(
                _______,  RGB_TOG,  _______,  _______,  _______,  _______,             KC_NO,   KC_NO,   KC_UP,   KC_NO,     KC_NO,   KC_NO,
                QK_BOOT,  RGB_HUI,  RGB_SAI,  RGB_VAI,  _______,  _______,             KC_NO,   KC_LEFT, KC_DOWN, KC_RIGHT,  KC_NO,   KC_NO,
-               QK_RBT,   RGB_HUD,  RGB_SAD,  RGB_VAD,  _______,  _______,             KC_NO,   KC_NO,   KC_NO,   KC_NO,     KC_NO,   KC_NO,   KC_NO,
-               KC_NO,    KC_NO,                      KC_NO,   KC_NO,                  KC_NO,   KC_NO,                     KC_NO,   KC_NO,   KC_NO
+               QK_RBT,   RGB_HUD,  RGB_SAD,  RGB_VAD,  _______,  _______,    KC_NO,   KC_NO,   KC_NO,   KC_NO,   KC_NO,     KC_NO,   KC_NO,
+               KC_NO,    KC_NO,                      KC_NO,   KC_NO,                  KC_NO,   KC_NO,            KC_NO,     KC_NO,   KC_NO
              )
 };
 
 const char chordal_hold_layout[MATRIX_ROWS][MATRIX_COLS] PROGMEM =
     LAYOUT(
-        'L', 'L', 'L', 'L', 'L', 'L',  'R', 'R', 'R', 'R', 'R', 'R',
-        'L', 'L', 'L', 'L', 'L', 'L',  'R', 'R', 'R', 'R', 'R', 'R',
+        'L', 'L', 'L', 'L', 'L', 'L',       'R', 'R', 'R', 'R', 'R', 'R',
+        'L', 'L', 'L', 'L', 'L', 'L',       'R', 'R', 'R', 'R', 'R', 'R',
         'L', 'L', 'L', 'L', 'L', 'L',  'R', 'R', 'R', 'R', 'R', 'R', 'R',
-        'L', 'L',           '*', '*',  '*', '*',      'R', 'R', 'R'
+        'L', 'L',           '*', '*',       '*', '*',      'R', 'R', 'R'
     );
 
 
